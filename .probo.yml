@@ -4,4 +4,7 @@ steps:
   - name: Look Around
     plugin: 'Shell'  # this is the default plugin
     command: "ls $SRC_DIR"  
+  - name: Show Readme
+    plugin: 'Shell'
+    command: "cat $SRC_DIR/README"
 
