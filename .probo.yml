@@ -1,9 +1,12 @@
 # Each step is the build/test process
 # the name of each step is the build context, and will get its own status updates
 steps:
+  - name: Install
+    plugin: 'Shell'
+    command: "rsync -av $SRC_DIR/ /var/www/"
   - name: Look Around
     plugin: 'Shell'  # this is the default plugin
-    command: "ls $SRC_DIR"  
+    command: "ls $SRC_DIR"
   - name: Show Readme
     plugin: 'Shell'
     command: "cat $SRC_DIR/README"
